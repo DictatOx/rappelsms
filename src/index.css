@@ -1,0 +1,28 @@
+/* ─────────────  Tailwind core  ───────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────  Variables couleur  ───────── */
+@layer base {
+  :root {
+    --c-primary-50 : #e0f2ff;
+    --c-primary-500: #0284c7;
+    --c-primary-600: #0276b5;
+  }
+}
+
+/* ─────────────  Composants  ──────────────── */
+@layer components {
+  .btn-primary {
+    @apply inline-block px-8 py-3 rounded-lg font-medium text-white
+            bg-[color:var(--c-primary-500)]
+            hover:bg-[color:var(--c-primary-600)] transition;
+  }
+}
+
+/* ─────────────  Style de base  — optionnel  */
+@layer utilities {
+  /* Smooth scrolling & font smoothing */
+  html { -webkit-font-smoothing: antialiased; @apply scroll-smooth; }
+}
